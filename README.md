@@ -6,7 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-Esse sistema foi desenvolvido com o objeto de gerenciqar livros de uma livraria, ou seja, com ele podemos cadastrar, listar, editar e excluir livros.
+Esse sistema foi desenvolvido com o objeto de gerenciar livros de uma livraria, ou seja, com ele podemos cadastrar, listar, editar e excluir livros.
 
 ![](./book-store.png)
 
@@ -15,7 +15,7 @@ Esse sistema foi desenvolvido com o objeto de gerenciqar livros de uma livraria,
 OS X, Linux ou Windows:
 
 ```sh
-npm i ou yarn
+npm i
 ```
 
 ou
@@ -31,14 +31,15 @@ yarn
   - Criação da home page
 - 0.0.1
   - Criação da estrutura do projeto
+  
+## Autor
 
-## Meta
+| [<img src="https://avatars1.githubusercontent.com/u/9813896?v=4&s=115"><br><sub>@edipojuan</sub>](https://github.com/edipojuan) |
+| :---: |
 
-Édipo Juan – [@edipojuan](http://edipojuan.com.br/) – edipojs@gmail.com
+## License
 
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
-
-[https://github.com/edipojuan/github-link](https://github.com/othonalberto/)
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes
 
 ## Contributing
 
