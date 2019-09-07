@@ -7,6 +7,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 
+import { NotifierModule, NotifierOptions } from 'angular-notifier';
+
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -26,12 +28,10 @@ const appRoutes: Routes = [
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
+    NotifierModule,
     HomeModule,
     BookModule,
     BrowserAnimationsModule
