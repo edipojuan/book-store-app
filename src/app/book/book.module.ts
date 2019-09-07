@@ -5,8 +5,6 @@ import { BookFormComponent } from './book-form/book-form.component';
 
 @NgModule({
   declarations: [BookListComponent, BookFormComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule]
 })
-export class BookModule { }
+export class BookModule {}

@@ -1,11 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}!
-  </h1>
-</div>
-
-<h5 class="card-title">Select a file for upload:</h5>
-<input type="file" (change)="upload($event)" accept=".png,.jpg" />
-
+<h1>Book Store</h1>
+<nav>
+  <a routerLink="" routerLinkActive="active">Página Principal</a>
+  <a routerLink="/livros" routerLinkActive="active">Livros</a>
+</nav>
 <router-outlet></router-outlet>
