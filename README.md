@@ -31,10 +31,11 @@ yarn
   - Criação da home page
 - 0.0.1
   - Criação da estrutura do projeto
+  
+## Autor
 
-## Meta
-
-Édipo Juan – [@edipojuan](http://edipojuan.com.br/) – edipojs@gmail.com
+| [<img src="https://avatars1.githubusercontent.com/u/9813896?v=4&s=115"><br><sub>@edipojuan</sub>](https://github.com/edipojuan) |
+| :---: |
 
 Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
 
