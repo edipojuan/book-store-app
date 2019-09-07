@@ -1,6 +1,7 @@
 <div class="modal-header">
   <h4 class="modal-title pull-left">
-    <i class="fas fa-book-open"></i>
+    <!-- <i class="fas fa-book-open"></i> -->
+    <i class="fas fa-book" style="color: #f0ad4e"></i>
     {{ title }}
   </h4>
   <button
@@ -27,17 +28,14 @@
         />
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Gêneros</label>
+        <label for="inputPassword4">Gênero</label>
         <select
           class="form-control"
           id="exampleFormControlSelect1"
           formControlName="genres"
         >
-          <option>Selecione o Gêneros</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <option value="">Selecione o Gênero...</option>
+          <option *ngFor="let genre of genres">{{ genre }}</option>
         </select>
       </div>
       <div class="form-group col-md-6">
@@ -133,7 +131,7 @@
       />
     </div>
 
-    <button type="submit" class="btn btn-success">
+    <button type="submit" class="btn btn-success" [disabled]="!this.form.valid">
       <i class="fas fa-save"></i>
       Salvar
     </button>

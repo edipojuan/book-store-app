@@ -8,6 +8,9 @@ import { BookFormComponent } from '../book-form/book-form.component';
 import { BookService } from 'src/app/shared/services/book.service';
 import { take } from 'rxjs/operators';
 
+import * as moment from 'moment';
+import 'moment/min/locales';
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -70,5 +73,10 @@ export class BookListComponent implements OnInit {
       },
       (error: any) => console.log(error.message)
     );
+  }
+
+  getDateFormat(date: any) {
+    moment.locale('pt-br');
+    return moment(date).format('LL');
   }
 }

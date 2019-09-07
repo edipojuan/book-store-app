@@ -26,11 +26,12 @@
                 <br />
                 Editora: <i>{{ item.publishingCompany }}</i>
               </p>
-              <p class="card-text">
+              <p class="card-text" style="margin-bottom: 0;">
                 <small class="text-muted">{{
-                  item.publicationDate | date: 'dd/MM/yyyy'
+                  getDateFormat(item.publicationDate)
                 }}</small>
               </p>
+
               <button
                 type="button"
                 class="btn btn-outline-primary"

@@ -11,6 +11,9 @@ import { BaseForm } from 'src/app/shared/base/base-form';
 import { Validators } from '@angular/forms';
 import { NotifierService } from 'angular-notifier';
 
+import * as moment from 'moment';
+import 'moment/min/locales';
+
 @Component({
   selector: 'app-book-form',
   templateUrl: './book-form.component.html',
@@ -25,6 +28,16 @@ export class BookFormComponent extends BaseForm {
   urlImage: Observable<string>;
 
   private readonly notifier: NotifierService;
+
+  genres = [
+    'Metaficção',
+    'Neocrítica',
+    'Novelas de Cavalaria',
+    'Paródia',
+    'Sick-Lit',
+    'Space Opera',
+    'Suspense'
+  ];
 
   constructor(
     injector: Injector,
@@ -58,6 +71,12 @@ export class BookFormComponent extends BaseForm {
   }
 
   fillForm() {
+    let { publicationDate } = this.book;
+
+    publicationDate = moment(publicationDate).format('DD-MM-YYYY');
+
+    this.book = { ...this.book, publicationDate };
+
     this.form.patchValue(this.book);
   }
 
