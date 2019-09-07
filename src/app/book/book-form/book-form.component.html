@@ -1,5 +1,8 @@
 <div class="modal-header">
-  <h4 class="modal-title pull-left">{{ title }}</h4>
+  <h4 class="modal-title pull-left">
+    <i class="fas fa-book-open"></i>
+    {{ title }}
+  </h4>
   <button
     type="button"
     class="close pull-right"
@@ -10,79 +13,93 @@
   </button>
 </div>
 <div class="modal-body">
-  <form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    form: {{ form.value | json }}
+
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Título</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          id="inputEmail4"
-          placeholder="Email"
+          formControlName="title"
+          placeholder="Informe o Título"
         />
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Gêneros</label>
-        <input
-          type="password"
+        <select
           class="form-control"
-          id="inputPassword4"
-          placeholder="Senha"
-        />
+          id="exampleFormControlSelect1"
+          formControlName="genres"
+        >
+          <option>Selecione o Gêneros</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
       </div>
       <div class="form-group col-md-6">
         <label for="inputEmail4">Data de publicação</label>
         <input
-          type="email"
+          type="text"
+          placeholder="Informe a Data de Publicação"
           class="form-control"
-          id="inputEmail4"
-          placeholder="Email"
+          formControlName="publicationDate"
+          bsDatepicker
+          [bsConfig]="{ isAnimated: true, containerClass: 'theme-orange' }"
         />
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Páginas</label>
         <input
-          type="password"
+          type="text"
           class="form-control"
+          formControlName="pages"
           id="inputPassword4"
-          placeholder="Senha"
+          placeholder="Informe a Quantidade de Páginas"
         />
       </div>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">XAutor</label>
+        <label for="inputEmail4">Autor</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
+          formControlName="author"
           id="inputEmail4"
-          placeholder="Email"
+          placeholder="Informe o Autor"
         />
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Editora</label>
         <input
-          type="password"
+          type="text"
           class="form-control"
+          formControlName="publishingCompany"
           id="inputPassword4"
-          placeholder="Senha"
+          placeholder="Informe a Editora"
         />
       </div>
     </div>
     <div class="form-group">
       <label for="inputAddress">Descrição</label>
-      <input
-        type="text"
+      <textarea
         class="form-control"
-        id="inputAddress"
-        placeholder="Rua dos Bobos, nº 0"
-      />
+        id="validationTextarea"
+        placeholder="Informe a Descrição"
+        formControlName="description"
+        required
+      ></textarea>
     </div>
     <div class="form-group">
       <label for="inputAddress2">Sinopse</label>
       <input
         type="text"
         class="form-control"
+        formControlName="synopsis"
         id="inputAddress2"
-        placeholder="Apartamento, hotel, casa, etc."
+        placeholder="Informe a Sinopse"
       />
     </div>
     <div class="form-group">
@@ -96,25 +113,30 @@
           id="validatedCustomFile"
           required
         />
-        <label class="custom-file-label" for="validatedCustomFile"
-          >Escolher arquivo...</label
-        >
+        <label class="custom-file-label" for="validatedCustomFile">
+          Escolha uma Imagem de Capa...
+        </label>
         <div class="invalid-feedback">
           Exemplo de feedback inválido para input file
         </div>
       </div>
+      urlImage: {{ urlImage | async }}
     </div>
     <div class="form-group">
       <label for="inputAddress2">Links de Compra</label>
       <input
         type="text"
         class="form-control"
+        formControlName="purchaseLinks"
         id="inputAddress2"
-        placeholder="Apartamento, hotel, casa, etc."
+        placeholder="Informe o(s) Links de Compra"
       />
     </div>
 
-    <button type="submit" class="btn btn-success">Salvar</button>
+    <button type="submit" class="btn btn-success">
+      <i class="fas fa-save"></i>
+      Salvar
+    </button>
   </form>
 </div>
 <div class="modal-footer">

@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  url = `${environment.baseUrl}/api/book`;
+  url = `${environment.baseUrl}/api/Books`;
 
   constructor(public http: HttpClient) {}
 
@@ -17,7 +23,7 @@ export class BookService {
 
   create(data: any) {
     const body = JSON.stringify(data);
-    return this.http.post(this.url, body);
+    return this.http.post(this.url, body, httpOptions);
   }
 
   edit(data: any) {
