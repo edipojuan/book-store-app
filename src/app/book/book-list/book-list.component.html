@@ -1,4 +1,14 @@
 <div class="container">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="openModalWithComponent('Adicionar')"
+    style="margin-bottom: 15px"
+  >
+    <i class="fas fa-plus" style="margin-right: 8px"></i>
+    Adicionar Livro
+  </button>
+
   <div class="row">
     <div class="col-4" *ngFor="let item of books">
       <div class="card mb-3" style="max-width: 540px;">

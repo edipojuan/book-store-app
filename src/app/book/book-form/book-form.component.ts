@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import {
   AngularFireStorage,
@@ -11,11 +12,22 @@ import {
   templateUrl: './book-form.component.html',
   styleUrls: ['./book-form.component.scss']
 })
-export class BookFormComponent {
+export class BookFormComponent implements OnInit {
   ref: AngularFireStorageReference;
   task: AngularFireUploadTask;
 
-  constructor(private afStorage: AngularFireStorage) {}
+  title: string;
+  closeBtnName: string;
+  list: any[] = [];
+
+  constructor(
+    private afStorage: AngularFireStorage,
+    public bsModalRef: BsModalRef
+  ) {}
+
+  ngOnInit() {
+    this.list.push('PROFIT!!!');
+  }
 
   upload(event) {
     const id = Math.random()
