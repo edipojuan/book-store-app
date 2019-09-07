@@ -1,27 +1,56 @@
-# UploadImagem
+# Book Store | Case técnico
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+> Sistema de gerenciamento de Livros.
 
-## Development server
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Esse sistema foi desenvolvido com o objeto de gerenciqar livros de uma livraria, ou seja, com ele podemos cadastrar, listar, editar e excluir livros.
 
-## Code scaffolding
+![](./book-store.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+OS X, Linux ou Windows:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+npm i ou yarn
+```
 
-## Running unit tests
+ou
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+yarn
+```
 
-## Running end-to-end tests
+## Histórico de lançamentos
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- 0.1.0
+  - Criação das páginas de listagem, cadastro, edição e exclusão de livros.
+  - Criação da home page
+- 0.0.1
+  - Criação da estrutura do projeto
 
-## Further help
+## Meta
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Édipo Juan – [@edipojuan](http://edipojuan.com.br/) – edipojs@gmail.com
+
+Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
+
+[https://github.com/edipojuan/github-link](https://github.com/othonalberto/)
+
+## Contributing
+
+1. Faça o _fork_ do projeto (<https://github.com/edipojuan/book-store-app/fork>)
+2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
+3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
+4. _Push_ (`git push origin feature/fooBar`)
+5. Crie um novo _Pull Request_
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/edipojuan/book-store-app/wiki
