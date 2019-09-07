@@ -1,4 +1,4 @@
-# Book Store | Case técnico
+# Book Store (Case técnico)
 
 > Sistema de gerenciamento de Livros.
 
