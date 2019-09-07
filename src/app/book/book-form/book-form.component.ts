@@ -106,6 +106,7 @@ export class BookFormComponent extends BaseForm {
   }
 
   upload(event: any) {
+    this.form.get('bookCover').setValue(null);
     const id = Math.random()
       .toString(36)
       .substring(2);
