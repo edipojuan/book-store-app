@@ -15,6 +15,7 @@ import { BookListComponent } from './book/book-list/book-list.component';
 // Modules
 import { HomeModule } from './home/home.module';
 import { BookModule } from './book/book.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     HomeModule,
-    BookModule
+    BookModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
