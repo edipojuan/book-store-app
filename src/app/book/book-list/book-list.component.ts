@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
+  books = [
+    { title: 'test 1' },
+    { title: 'test 2' },
+    { title: 'test 3' },
+    { title: 'test 3' },
+    { title: 'test 3' },
+    { title: 'test 3' },
+    { title: 'test 4' }
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -7,7 +7,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 
-import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import { NotifierModule } from 'angular-notifier';
 
 // Components
 import { AppComponent } from './app.component';

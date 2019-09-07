@@ -1,7 +1,40 @@
-<h1>Book Store</h1>
-<nav>
-  <a routerLink="" routerLinkActive="active">Página Principal</a>
-  <a routerLink="/livros" routerLinkActive="active">Livros</a>
-</nav>
-<router-outlet></router-outlet>
-<notifier-container></notifier-container>
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <i class="far fa-hand-point-up"></i>
+      Livraria Digital</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#textoNavbar"
+      aria-controls="textoNavbar"
+      aria-expanded="false"
+      aria-label="Alterna navegação"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="textoNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="" routerLinkActive="active">
+            Página Principal
+            <span class="sr-only">(Página atual)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/livros" routerLinkActive="active"
+            >Livros</a
+          >
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Case técnico | Édipo Juan
+      </span>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+  <notifier-container></notifier-container>
+</div>
