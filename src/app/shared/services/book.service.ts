@@ -26,9 +26,9 @@ export class BookService {
     return this.http.post(this.url, body, httpOptions);
   }
 
-  edit(data: any) {
+  edit(data: any, id: string) {
     const body = JSON.stringify(data);
-    return this.http.put(`${this.url}/${data._id}`, body);
+    return this.http.put(`${this.url}/${id}`, body, httpOptions);
   }
 
   delete(id: string) {

@@ -19,7 +19,7 @@ import { NotifierService } from 'angular-notifier';
 export class BookFormComponent extends BaseForm {
   title: string;
   closeBtnName: string;
-  list: any[] = [];
+  book: any = null;
 
   uploadPercent: Observable<number>;
   urlImage: Observable<string>;
@@ -39,28 +39,48 @@ export class BookFormComponent extends BaseForm {
 
   onInit() {
     this.form = this.formBuilder.group({
+      id: [null],
       title: [null, Validators.required],
-      genres: [null, Validators.required], // array
-      publicationDate: [null, Validators.required], // date
-      pages: [null, Validators.required], // int
+      genres: [null, Validators.required],
+      publicationDate: [null, Validators.required],
+      pages: [null, Validators.required],
       author: [null, Validators.required],
       publishingCompany: [null, Validators.required],
       description: [null, Validators.required],
       synopsis: [null, Validators.required],
       bookCover: [null, Validators.required],
-      purchaseLinks: [null, Validators.required] // array
+      purchaseLinks: [null, Validators.required]
     });
 
-    this.list.push('PROFIT!!!');
+    if (this.book) {
+      this.fillForm();
+    }
+  }
+
+  fillForm() {
+    this.form.patchValue(this.book);
   }
 
   submit(): void {
-    this.bookService.create(this.form.value).subscribe(
-      (response) => {
-        // (this.property = arg)
-        this.notifier.notify('success', 'Livro adicionado com sucesso!');
+    const { id } = this.form.value;
+
+    let observable;
+
+    if (id) {
+      observable = this.bookService.edit(this.form.value, id);
+    } else {
+      observable = this.bookService.create(this.form.value);
+    }
+
+    observable.subscribe(
+      (response: any) => {
+        const message = `Informações ${
+          id ? 'atualizadas' : 'adicionadas'
+        } com sucesso!`;
+
+        this.notifier.notify('success', message);
       },
-      (error) => console.log(error.message)
+      (error: any) => console.log(error.message)
     );
   }
 
