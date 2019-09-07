@@ -15,7 +15,7 @@ Esse sistema foi desenvolvido com o objeto de gerenciqar livros de uma livraria,
 OS X, Linux ou Windows:
 
 ```sh
-npm i ou yarn
+npm i
 ```
 
 ou
