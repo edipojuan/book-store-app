@@ -37,9 +37,9 @@ yarn
 | [<img src="https://avatars1.githubusercontent.com/u/9813896?v=4&s=115"><br><sub>@edipojuan</sub>](https://github.com/edipojuan) |
 | :---: |
 
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
+## License
 
-[https://github.com/edipojuan/github-link](https://github.com/othonalberto/)
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes
 
 ## Contributing
 
