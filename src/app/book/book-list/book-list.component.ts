@@ -6,6 +6,7 @@ import { NotifierService } from 'angular-notifier';
 import { BookFormComponent } from '../book-form/book-form.component';
 
 import { BookService } from 'src/app/shared/services/book.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-book-list',
@@ -36,7 +37,12 @@ export class BookListComponent implements OnInit {
       initialState,
       class: 'modal-lg'
     });
+
     this.bsModalRef.content.closeBtnName = 'Cancelar';
+
+    this.modalService.onHide.pipe(take(1)).subscribe(() => {
+      this.get();
+    });
   }
 
   ngOnInit() {

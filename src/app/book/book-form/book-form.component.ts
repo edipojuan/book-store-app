@@ -79,6 +79,8 @@ export class BookFormComponent extends BaseForm {
         } com sucesso!`;
 
         this.notifier.notify('success', message);
+
+        this.closeModal();
       },
       (error: any) => console.log(error.message)
     );
@@ -104,5 +106,14 @@ export class BookFormComponent extends BaseForm {
         })
       )
       .subscribe();
+  }
+
+  closeModal() {
+    if (!this.bsModalRef) {
+      return;
+    }
+
+    this.bsModalRef.hide();
+    this.bsModalRef = null;
   }
 }
