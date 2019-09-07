@@ -6,7 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-Esse sistema foi desenvolvido com o objeto de gerenciqar livros de uma livraria, ou seja, com ele podemos cadastrar, listar, editar e excluir livros.
+Esse sistema foi desenvolvido com o objeto de gerenciar livros de uma livraria, ou seja, com ele podemos cadastrar, listar, editar e excluir livros.
 
 ![](./book-store.png)
 
