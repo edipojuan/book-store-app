@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container">
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <i class="far fa-hand-point-up"></i>
-      Livraria Digital</a
-    >
+      Livraria Digital
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -19,14 +19,16 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" routerLink="" routerLinkActive="active">
+            <i class="fas fa-house-damage"></i>
             Página Principal
             <span class="sr-only">(Página atual)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/livros" routerLinkActive="active"
-            >Livros</a
-          >
+          <a class="nav-link" routerLink="/livros" routerLinkActive="active">
+            <i class="fas fa-stream"></i>
+            Livros
+          </a>
         </li>
       </ul>
       <span class="navbar-text">
@@ -34,7 +36,8 @@
       </span>
     </div>
   </nav>
-
-  <router-outlet></router-outlet>
+  <div style="margin-top: 70px">
+    <router-outlet></router-outlet>
+  </div>
   <notifier-container></notifier-container>
 </div>
