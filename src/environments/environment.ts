@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:5000',
+  baseUrl: 'https://localhost:5001',
   firebaseConfig: {
     apiKey: 'AIzaSyBMnQa9W_4aKrlSQ4kIlm_JQkAfNJJUZPM',
     authDomain: 'book-store-d9ae0.firebaseapp.com',
